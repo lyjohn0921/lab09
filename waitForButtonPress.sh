@@ -1,6 +1,6 @@
 #!/bin/bash
 function wait(){
-	c=0;
+
         while [ 1 == 1 ]
         do
                 until test `gpio read 5` -eq 0;do
@@ -9,9 +9,7 @@ function wait(){
                 while test `gpio read 5` -eq 0;do
 		echo pressed >/dev/null;
                 done
-                . ./countButtonPress.sh $c
-		
-		echo "c in wait is $c"
-        done
+		echo "pressed"
+		return 0
+                done
 }
-wait

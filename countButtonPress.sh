@@ -16,7 +16,7 @@ function count() {
 	echo "increasing c is $c"
 	return $c
 }
-c=$1
-echo "c before call is $c"
-count $c
-c=$?
+#c=$1
+#echo "c before call is $c"
+#count $c
+#c=$?
